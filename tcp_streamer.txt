@@ -1,0 +1,17 @@
+public class Main
+{
+    interface ToyTCPStream {
+        public void receive(int chunk, byte[] data){
+            System.out.println(chunk+data.length);
+        }
+        public int read([]byte data){
+            return data.length();
+        }
+    }
+	public static void main(String[] args) {
+		ToyTCPStream t = new ToyTCPStream();
+		char[] c = new char[];
+		t.receive(2,c);
+		t.read(c);
+	}
+}
